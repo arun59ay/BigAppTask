@@ -1,0 +1,19 @@
+.headerContent{
+    height: 60px;
+    background-color: #FA6204;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    .userinitial{
+        background: #1E4E40;
+        border-radius: 40px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #fff;
+    }
+}

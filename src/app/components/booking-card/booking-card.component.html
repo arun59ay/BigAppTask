@@ -1,0 +1,41 @@
+<ng-template ngFor let-filterCardData [ngForOf]="filterCardData">
+<div class="bookingCard">
+    <div class="flight">
+        <div class="flightCompanyImg">
+            <img src="../../../assets/images/{{filterCardData?.flightCompany}}" class="flightCompany" />
+        </div>
+        <div class="flightTimeShedule">
+            <div class="totalHous">{{filterCardData?.totalHous}}<sup class="additionalDays">{{filterCardData?.additionalDays}}</sup></div>
+            <div class="fightName">{{filterCardData?.fightName}}</div>
+        </div>
+    </div>
+    <div class="shedules">
+        <div class="flighTravelTiming">
+            <div class="flightTravel">
+                <div class="flightTotalTiming">{{filterCardData?.flightTotalTiming}}</div>
+                <div class="flightLocation">{{filterCardData?.flightLocation}}</div>
+            </div>
+        </div>
+        <div class="flightStatus">
+            <div class="flightTimingDetails">
+                <div class="flightStop">{{filterCardData?.flightStop}}</div>
+                <div class="flightTiming">{{filterCardData?.flightTiming}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="accessories">
+        <div class="accessoriesImagesContaint">
+            <div class="accessoriesImgCofig">
+                <img *ngFor="let item of filterCardData?.accessoriesImages" src="../../../assets/images/{{item.image}}" class="accessoriesImages" />
+            </div>
+            <div class="btnConfig">
+                <app-button [buttonConfig]="bookingBtn"></app-button>
+                <div class="fightDetails">
+                    <div>Flight Details</div>
+                    <img src="../../../assets/images/expand_more.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</ng-template>

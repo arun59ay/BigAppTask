@@ -1,0 +1,66 @@
+<ng-template ngFor let-inputData [ngForOf]="inputData">
+    <ng-container [ngSwitch]="inputData.controlType">
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'text'">
+            <div class="inputContainer">
+                <div [style]="inputData?.labelStyle">{{inputData?.label}}</div>
+                <div [class.imageClassConfig]="inputData?.imageClassConfig">
+                    <img class="imgInput" src="../../../assets/images/{{inputData?.flightImage}}"
+                        [ngStyle]="inputData?.stylesFlightImage" />
+                    <input [type]="inputData?.type" [pattern]="inputData?.pattern" class="inputCustom"
+                        [class.imageClass]="inputData?.imageClass" [ngStyle]="inputData?.styles"
+                        [placeholder]="inputData?.placeholder" />
+                </div>
+            </div>
+        </ng-template>
+
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'select'">
+            <div [class.selectLayout]="inputData?.selectLayout">
+                <div *ngIf="labelStyle" [style]="inputData?.labelStyle">{{inputData?.label}}</div>
+                <div class="selectTag">
+                    <select [class.selectConfig]="inputData?.selectConfig" [ngStyle]="inputData?.styles">
+                        <option value="" class="text-white">{{inputData.placeholder}}</option>
+                        <option *ngFor="let option of inputData.options" [value]="option.value">{{option.optionName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </ng-template>
+
+
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'checkbox'">
+            <div>
+                <div [class.checkboxConfig]="inputData?.checkboxConfig">
+                    <div class="inputConfigContent">
+                        <input class="checkBoxCustom" [id]="inputData?.checkBoxLabel" [type]="inputData?.type"
+                            [value]="inputData?.value">
+                        <label [for]="inputData?.checkBoxLabel"></label>
+                        <div [class.checkBoxLabel]="inputData?.checkBoxLabel">{{inputData?.label}}</div>
+                    </div>
+                    <div class="filterChecksInputLabel">{{inputData?.rate}}</div>
+                </div>
+            </div>
+        </ng-template>
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'radio'">
+            <div [class]='inputData?.grid'>
+                <div [class.radioConfig]="inputData?.radioConfig">
+                    <div class="inputConfigContent">
+                        <input  [id]="inputData?.checkBoxLabel" [type]="inputData?.type"
+                            [value]="inputData?.value">
+                        <label [for]="inputData?.checkBoxLabel"></label>
+                    </div>
+                    <div class="radioLabel" *ngIf="inputData?.label">{{inputData?.label}}</div>
+                </div>
+            </div>
+        </ng-template>
+
+
+    </ng-container>
+</ng-template>

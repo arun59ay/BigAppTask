@@ -1,0 +1,16 @@
+<ng-template ngFor let-filterCardData [ngForOf]="filterCardData">
+    <div class="filterContainer">
+        <div class="img">
+            <img class="filterImage" src="../../../assets/images/{{filterCardData?.img}}" />
+        </div>
+        <div>
+            <div class="heading">{{filterCardData?.heading}}</div>
+            <div>
+                <div class="subHeading">
+                    <div class="rate">$ {{filterCardData?.rate}}</div>
+                    <div class="time">Duration: {{filterCardData?.timing}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,73 @@
+<div class="filters">
+    <div class="filterSections">
+        <div class="filterLabel">
+            <img src="../../../assets/images/filter-results-button.png" class="filterIcon" />
+            <div class="filterName">Filters</div>
+        </div>
+        <div class="filterSort">
+            <img src="../../../assets/images/refresh.png" class="refreshIcon" />
+            <img src="../../../assets/images/check-24px.svg" class="checkIcon" />
+             <div class="applyLabel">Apply</div>
+        </div>
+    </div>
+    <div class="stopsSection">
+        <div class="sectionLabel">
+            <div class="label">Stops</div>
+            <img class="expand" src="../../../assets/images/remove.png" />
+        </div>
+        <div class="fareFrom">From:</div>
+        <div class="filterChecks">
+            <div class="filterChecksInput">
+                <app-input  [inputData]="flightFrom" class="appInput"></app-input>
+                <!-- <div class="filterChecksInputLabel">$ 2000.00</div> -->
+            </div>
+        </div>
+    </div>
+    <div class="airportSection">
+        <div class="sectionLabel">
+            <div class="label">Airports</div>
+            <img class="expand" src="../../../assets/images/remove.png" />
+        </div>
+        <div class="fareFrom">Flight Legs:</div>
+        <div class="flightLegs">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="fareFrom">Bangalore</div>
+        <div class="filterChecks">
+            <div class="filterChecksInput">
+                <app-input  [inputData]="flightFromBangalore" class="appInput"></app-input>
+            </div>
+        </div>
+        <div class="fareFrom">New York</div>
+        <div class="filterChecks">
+            <div class="filterChecksInput">
+                <app-input  [inputData]="flightFromNewYork" class="appInput"></app-input>
+            </div>
+        </div>
+    </div>
+    <div class="timesSection">
+        <div class="sectionLabel">
+            <div class="label">Times</div>
+            <img class="expand" src="../../../assets/images/remove.png" />
+        </div>
+        <div class="fareFrom">Flight Legs:</div>
+        <div class="flightLegs">
+            <div>Take-off</div>
+            <div>Landing</div>
+        </div>
+        <div class="fareFrom">Bangalore</div>
+        <div class="filterChecks">
+            <div class="filterChecksInput">
+                <app-input  [inputData]="takeofTime" class="appInput row"></app-input>
+            </div>
+        </div>
+        <div class="fareFrom">New York</div>
+        <div class="filterChecks">
+            <div class="filterChecksInput">
+                <app-input  [inputData]="landingTime" class="appInput row"></app-input>
+            </div>
+        </div>
+    </div>
+</div>

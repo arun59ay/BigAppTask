@@ -1,0 +1,76 @@
+<div>
+    <div>
+        <app-header></app-header>
+    </div>
+    <div class="destinationCard">
+        <div class="firstSection">
+            <app-input [inputData]="wayFilter" class="selectConfig"></app-input>
+        </div>
+        <div class="secondSection">
+            <div class="destination">
+                <app-input [inputData]="flightFrom"></app-input>
+                <div class="switchDestination">
+                    <img src="../../../assets/images/swap_horiz-24px.svg" />
+                </div>
+                <app-input [inputData]="flightTo"></app-input>
+            </div>
+            <app-input [inputData]="flightDate"></app-input>
+            <div class="returnBtn">
+                <div class="firstBtnTxt">+ ADD RETURN DATE</div>
+                <div class="secondBtnTxt">Save more on return trips!</div>
+            </div>
+        </div>
+    </div>
+    <div class="filterCard">
+        <div>
+        </div>
+        <div class="filter">
+            <app-filter-card [filterCardData]="filterCard" class="card"></app-filter-card>
+            <div>
+                <div class="sortBtn">
+                    <div class="imgBorder">
+                        <img src="../../../assets/images/sort-24px.svg" />
+                    </div>
+                    <select>
+                        <option selected>Other Sort Options</option>
+                        <option>sort 1</option>
+                        <option>sort 2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottomContainer">
+        <div class="leftContainer">
+            <app-filters></app-filters>
+        </div>
+        <div class="rightContainer">
+            <div class="bestFlightDetails">Best Flights</div>
+            <div class="fareDetails">Total price includes taxes + fees for 1 adult. Additional bag fees and other fees
+                may apply.</div>
+            <div class="containerCard">
+                <div class="card w-75">
+                    <app-booking-card [filterCardData]="filterCardData" class="bookingCard"></app-booking-card>
+                </div>
+                <div class="w-25 fareDiscount">
+                    <div class="fightClass">
+                        <img src="../../../assets/images/check-24px (1).svg" />
+                        <div class="class">Economy</div>
+                    </div>
+                    <div class="fare">
+                        $ 577.00
+                    </div>
+                    <div class="price">
+                        <div>Price per person</div>
+                        <div>(incl. taxes & fees)</div>
+                    </div>
+                    <div class="coupon">
+                        <div>Get up to $ 200 OFF.</div>
+                        <div>Use code: FCINTFLY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

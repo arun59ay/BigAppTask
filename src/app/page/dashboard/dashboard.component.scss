@@ -1,0 +1,206 @@
+.destinationCard {
+    background: transparent linear-gradient(83deg, #CC0036 0%, #F04A00 100%) 0% 0% no-repeat padding-box;
+    padding: 30px;
+
+    .firstSection {
+        margin-bottom: 1rem;
+        padding-left: 18.8%;
+
+        .selectConfig {
+            display: flex;
+        }
+    }
+
+    .secondSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .destination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .switchDestination {
+            background: #fff;
+            box-shadow: 0px 3px 6px #00000029;
+            padding: 6px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 43%;
+            cursor: pointer;
+        }
+
+        .returnBtn {
+            background: #fff;
+            padding: 10px 60px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+
+            .firstBtnTxt {
+                color: #0D0D73;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .secondBtnTxt {
+                font-size: 10px;
+                color: #5F6368;
+            }
+        }
+    }
+}
+
+.filterCard {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 25% 75%);
+    
+    .filter{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .sortBtn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .imgBorder {
+            border: 1px solid #DADCE0;
+            padding: 15px;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        select {
+            padding: 19.5px 8px;
+            border-radius: 0px 4px 4px 0px;
+            border-left: none;
+            border-color: #DADCE0;
+            outline: none;
+            color: #5F6368;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.bottomContainer {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 25% 75%);
+
+    .leftContainer {}
+
+    .rightContainer {
+        margin-bottom: 8rem;
+        .bestFlightDetails {
+            color: #0D0D73;
+            font-size: 18px;
+            font-weight: 500;
+            padding-left: 5px;
+        }
+
+        .fareDetails {
+            color: #5F6368;
+            font-size: 10px;
+            font-weight: 500;
+            padding-left: 5px;
+            padding-top: 3px;
+        }
+
+        .containerCard {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+
+        .card {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 10px 0px 0px 10px;
+            padding: 20px;
+            margin-top: 10px;
+            // margin-right: 25px;
+            display: flex;
+            // align-items: center;
+            height: 100%;
+
+            .bookingCard {
+                padding-right: 10px;
+                width: 100%;
+            }
+
+        }
+
+        .fareDiscount {
+            border-left: 2px dashed #DADCE0;
+            background-color: #FBFBFB;
+            // height: 100%;
+            text-align: end;
+            margin-right: 25px;
+            padding: 40px 20px 0px 29px;
+            border-radius: 0px 10px 10px 0px;
+            margin-top: 10px;
+            // height: 45vh;
+            height: 100%;
+            box-shadow: 0px 3px 6px #00000029;
+
+            .fare{
+                color: #202124;
+                font-size: 24px;
+                padding: 0 5px;
+                font-weight: 600;
+            }
+
+            .fightClass {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                font-size: 12px;
+                margin-bottom: 8px;
+
+                .class {
+                    padding-left: 10px;
+                }
+            }
+
+            .price {
+                color: #757575;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .coupon {
+                color: #FA6204;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.w-25 {
+    width: 15%;
+}
+
+.w-75 {
+    width: 85%;
+}
